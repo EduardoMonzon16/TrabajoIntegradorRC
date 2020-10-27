@@ -50,11 +50,8 @@ void BellmanFord(struct Grafico* grafico, int fuente)
         for (j = 0; j < numarista; j++)
         {
             int u = grafico->Arista[j].aristainicio;
-
             int v = grafico->Arista[j].aristallegada;
-
             int peso = grafico->Arista[j].peso;
-
             if (almacen[u] + peso < almacen[v])
                 almacen[v] = almacen[u] + peso;
         }
@@ -63,13 +60,8 @@ void BellmanFord(struct Grafico* grafico, int fuente)
     for (i = 0; i < numarista; i++)
     {
         int u = grafico->Arista[i].aristainicio;
-
         int v = grafico->Arista[i].aristallegada;
-
         int peso = grafico->Arista[i].peso;
-
-
-
         if (almacen[u] + peso < almacen[v])
             printf("Este gráfico contiene un ciclo de arista negativo\n");
     }
@@ -80,8 +72,7 @@ void BellmanFord(struct Grafico* grafico, int fuente)
 
 int main()
 {
-    int numvertice,numarista,fuente;  
-
+    int numvertice,numarista,fuente;
 	printf("Ingresa el numero de vertices que quiere en el grafico:\n");
     scanf("%d",&numvertice);
 
@@ -100,9 +91,7 @@ int main()
         scanf("%d",&grafico->Arista[i].aristallegada);
         scanf("%d",&grafico->Arista[i].peso);
     }
-
     BellmanFord(grafico, fuente);
-
     return 0;
 }
 
