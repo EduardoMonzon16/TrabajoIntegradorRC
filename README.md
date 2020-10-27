@@ -80,7 +80,7 @@ void BellmanFord(struct Grafico* grafico, int fuente)
 
 int main()
 {
-    int numvertice,numarista,fuente;  //V = no.of Vertices, E = no.of Edges, S is source vertex
+    int numvertice,numarista,fuente;  
 
 	printf("Ingresa el numero de vertices que quiere en el grafico:\n");
     scanf("%d",&numvertice);
